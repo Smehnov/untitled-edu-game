@@ -39,7 +39,6 @@ input:focus{
     text-align: center;
     border-radius: 8px;
     margin-right: 1%;
-    padding-top: 1%;
     /* margin-top: 1%;
     margin-bottom: 5%;*/
 }
@@ -140,9 +139,8 @@ input:focus{
 
 .delete_block_but{
     width: 50%;
-    margin-bottom: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     border-radius: 8px;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -158,8 +156,8 @@ input:focus{
 .reload_page_button{
     float: right;
     width: 5.5em;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     margin-right: 0.3em;
     background-color: #c7c924;
     font-size: 1.2em;
@@ -189,8 +187,8 @@ input:focus{
 
 .for_blocks{
     width: 90%;
-    height: 11em;
-    margin: 3% auto;
+    height: 10.5em;
+    margin: 2% auto;
     border: 2px solid black;
     border-radius: 8px;
 }
