@@ -75,7 +75,7 @@ input:focus{
     margin-right: 5%;
     margin-top: -3em;
     width: 15%;
-    height: 2.2em;
+    height: 2em;
     border-radius: 5px;
     background-color: green;
     font-size: 0.8em;
@@ -139,7 +139,7 @@ input:focus{
 }
 
 .delete_block_but{
-    width: 90%;
+    width: 60%;
     margin-bottom: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -147,6 +147,8 @@ input:focus{
     font-size: 1.2em;
     text-transform: uppercase;
     background-color: #f01818;
+    float: left;
+    margin-left: 0.5em;
 }
 
 .delete_block_but:hover{
@@ -172,6 +174,7 @@ input:focus{
 
 .for_blocks{
     width: 90%;
+    height: 11em;
     margin: 3% auto;
     border: 2px solid black;
     border-radius: 8px;

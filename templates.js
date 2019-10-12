@@ -151,8 +151,8 @@ var html_group_template = {
 
 
 var output_group_template = {
-  x:40,
-  y:160,
+  x:260,
+  y:460,
   draggable: true
 }  
 
