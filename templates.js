@@ -168,6 +168,7 @@ var html_group_template = {
 
 
 var output_group_template = {
+  name: "output_brick",
   x:260,
   y:460,
   draggable: true,

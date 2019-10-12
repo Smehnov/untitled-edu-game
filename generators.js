@@ -360,3 +360,7 @@ function set_brick_menu(brick){
         layer.draw()
     }
 }
+
+function get_output_text(){
+    
+}
