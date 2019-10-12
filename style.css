@@ -65,7 +65,7 @@ input:focus{
 .label{
     color: black;
     height: 30px;
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 2em;
     font-family: 'Arial', Courier, monospace;
 }
@@ -122,7 +122,7 @@ input:focus{
 }
 
 .delete_block_but{
-    width: 60%;
+    width: 90%;
     margin-bottom: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -151,4 +151,11 @@ input:focus{
     margin: 0 auto;
     text-align: left;
     padding: 4px 4px;
+}
+
+.for_blocks{
+    width: 90%;
+    margin: 3% auto;
+    border: 2px solid black;
+    border-radius: 8px;
 }
