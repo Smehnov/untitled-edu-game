@@ -146,13 +146,28 @@ input:focus{
     border-radius: 8px;
     font-size: 1.2em;
     text-transform: uppercase;
-    background-color: #f01818;
+    background-color: #a6353d;
     float: left;
     margin-left: 0.5em;
 }
 
 .delete_block_but:hover{
     background-color: red;
+}
+
+.reload_page_button{
+    float: right;
+    width: 4.5em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 0.3em;
+    background-color: #c7c924;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+.reload_page_button:hover{
+    background-color: yellow;
 }
 
 .number_of_level{
