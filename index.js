@@ -39,10 +39,10 @@ var links = [
 
 ]
 // add the shape to the layer
-var if1 = generate_if()
-
+var if1 = generate_if(124)
+var if2 = generate_if(156)
 layer.add(if1.brick);
-
+layer.add(if2.brick);
 
 //var test_arrow = new Konva.Arrow(arrow_template);
 //var test_dot = new Konva.Circle(dot_template)

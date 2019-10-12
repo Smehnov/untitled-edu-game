@@ -1,4 +1,4 @@
-function generate_if(){
+function generate_if(id){
     
 
     var brick_group = new Konva.Group(if_group_template)
@@ -11,12 +11,12 @@ function generate_if(){
     
 
     var if_brick = {
-    
+        id:id,
         brick:  brick_group,
         type: "IF",
         inputs:{'inp1':''
     
-    },
+        },
         outputs:{
          'true':'',
          'false': ''
