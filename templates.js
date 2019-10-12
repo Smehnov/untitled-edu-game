@@ -124,7 +124,7 @@ var input_text_template = {
   text: 'HTML',
   fontSize: 35,
   fontFamily: 'Calibri',
-  fill: '',
+  fill: 'black',
   fontStyle: 'bold',
   stroke: 'white',
   strokeWidth: 0.5,
