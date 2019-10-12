@@ -143,7 +143,7 @@ var html_text_template = {
 }
 
 var dot_output_template = {
-  x:70,
+  x:120,
   y:118,
   radius: 10,
   fill: DOT_OUTPUT_COLOR,
@@ -164,3 +164,28 @@ var output_group_template = {
   y:160,
   draggable: true
 }  
+
+var output_block_template = {
+  x: 20,
+  y: 20,
+  width: 200,
+  height: 100,
+  fill: HTML_BLOCK_COLOR,
+  stroke: 'black',
+  strokeWidth: 4,
+  shadowOffsetX : 3,
+  shadowOffsetY : 3,
+  shadowBlur : 20,
+  opacity : 1,
+  cornerRadius: [5, 5, 5, 5]
+}
+
+var output_text_template = {
+  x: 40,
+  y: 35,
+  text: 'SERVER RESPONSE',
+  fontSize: 18,
+  fontFamily: 'Calibri',
+  fill: 'black',
+  fontStyle: 'bold'
+}
