@@ -1,17 +1,37 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 
-var stage = new Konva.Stage({
-  container: 'container',
-  width: width,
-  height: height
-});
+var stage = new Konva.Stage(stage_template);
 
 var layer = new Konva.Layer();
 
-var rect1 = new Konva.Rect(block_template);
+var rect1 = {
+    
+    brick:  new Konva.Rect(block_template),
+    type: "IF",
+    inputs:['inp1'],
+    outputs:['true', 'false']
+
+}
+
+var rect2 = {
+    
+    brick:  new Konva.Rect(block_template),
+    type: "IF",
+    inputs:['inp1'],
+    outputs:['true', 'false']
+ }
+
+var links = [
+
+
+]
 // add the shape to the layer
-layer.add(rect1);
+
+
+
+var test_arrow = new Konva.Arrow(arrow_template);
+layer.add(rect1.brick);
 
 
 
