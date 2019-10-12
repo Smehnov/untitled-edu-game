@@ -1,6 +1,6 @@
 var stage_template = {
   container: 'container',
-  width: window.innerWidth,
+  width: (window.innerWidth*0.75),
   height: window.innerHeight,
   draggable:true
 }
