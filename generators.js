@@ -10,8 +10,18 @@ function generate_if(id){
 
 
     brick_dot_input.on('click', ()=>{
-        brick_dot_input.fill('red')
-        layer.draw()
+        if((curent_state.choosed_obj != brick_dot_input) && (current_state.choosed_obj_type !='dot')){
+            curent_state.choosed_obj = brick_dot_input
+            curent_state.choosed_obj_type = 'dot'
+            brick_dot_input.fill('red')
+            layer.draw()
+        }else if(current_state.choosed_obj == brick_dot_input){
+            curent_state.choosed_obj = null
+            curent_state.choosed_obj_type = null
+            brick_dot_input.fill('red')
+            layer.draw()
+        }
+        
     })
 
     
