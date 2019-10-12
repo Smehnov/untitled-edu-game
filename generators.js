@@ -203,6 +203,7 @@ function generate_if_brick(id){
     var brick_dot_output_false= new Konva.Circle(dot_output_false_template)
     var brick_dot_input= new Konva.Circle(dot_input_template)
     var block_input_text = new Konva.Text(html_input_text_template)
+    block_input_text.text("==example.html")
     var brick_input_label = new Konva.Label(input_label_template).add(block_input_text)
 
   
@@ -393,6 +394,7 @@ function spawn_html_brick(){
 }
 function spawn_output_brick(){
     var output_brick = generate_output_brick(get_brick_id())
+    output_brick.brick.attrs.x = output_brick.brick.attrs.x*(++spawned_outputs)
     layer.add(output_brick.brick)
     layer.draw()
 }
@@ -444,7 +446,7 @@ function set_brick_menu(brick){
     //brick_menu.choosed_brick.brick.findOne('.block').stroke("white")
     brick_menu.brick_name.innerHTML = brick.type + " block";
     var brick_text = brick.brick.findOne('.input_text')
-    brick_menu.brick_input.placeholder = brick_text.text()
+    brick_menu.brick_input.placeholder = brick_text.attrs.text
     
     brick_menu.brick_input.onchange = ()=>{
         

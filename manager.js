@@ -1,6 +1,7 @@
 var last_brick_id = 0
 var is_level_completed = false
 
+var spawned_outputs= 0
 
 var current_state = {
     choosed_obj: null,
