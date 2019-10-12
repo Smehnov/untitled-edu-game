@@ -29,7 +29,7 @@ var block_template = {
 var if_text_template = {
   x: 50,
   y: 50,
-  text: 'Simple Text',
+  text: 'IF',
   fontSize: 30,
   fontFamily: 'Calibri',
   fill: 'green'
