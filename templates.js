@@ -82,8 +82,8 @@ var dot_output_false_template = {
 }
 
 var arrow_template = {
-  x: 140,
-  y: 180,
+  x: 0,
+  y: 0,
   points: [10, 235, 200, 235],
   pointerLength: 15,
   pointerWidth: 15,
