@@ -9,7 +9,7 @@ document.getElementById("new_html_block_but").onclick = ()=>{
     
 }
 spawn_output_brick()
-spawn_html_brick()
+
 
 // add the shape to the layer
 

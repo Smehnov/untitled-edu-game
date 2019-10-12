@@ -15,6 +15,7 @@ var if_group_template = {
   x:40,
   y:160,
   draggable: true
+  
 }  
 
 var block_template = {
@@ -53,7 +54,15 @@ var if_text_template = {
   fontSize: 35,
   fontFamily: 'Calibri',
   fill: 'black',
-  fontStyle: 'bold'
+  fontStyle: 'bold',
+  dragBoundFunc: function(pos) {
+    var newX = pos.x < 0 ? 0 : pos.x;
+    var newX = newX > 1150? 1150 : newX;
+    return {
+      x: newX,
+      y: pos.y
+    };
+  }
 }
 
 var dot_input_template = {
@@ -146,14 +155,30 @@ var dot_output_template = {
 var html_group_template = {
   x:40,
   y:160,
-  draggable: true
+  draggable: true,
+  dragBoundFunc: function(pos) {
+    var newX = pos.x < 0 ? 0 : pos.x;
+    var newX = newX > 1150? 1150 : newX;
+    return {
+      x: newX,
+      y: pos.y
+    };
+  }
 }  
 
 
 var output_group_template = {
   x:260,
   y:460,
-  draggable: true
+  draggable: true,
+  dragBoundFunc: function(pos) {
+    var newX = pos.x < 0 ? 0 : pos.x;
+    var newX = newX > 1150? 1150 : newX;
+    return {
+      x: newX,
+      y: pos.y
+    };
+  }
 }  
 
 var output_block_template = {
