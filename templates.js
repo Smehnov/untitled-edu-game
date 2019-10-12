@@ -118,7 +118,7 @@ var html_block_template = {
   cornerRadius: [5, 5, 5, 5]
 }
 
-var input_text_template = {
+var html_input_text_template = {
   x: 40,
   y: 50,
   text: 'HTML',
