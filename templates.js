@@ -20,13 +20,31 @@ var block_template = {
     cornerRadius: [5, 5, 5, 5]
   }
 
-var dot_template = {
-  x:50,
-  y:50,
-  radius: 10,
+var dot_input_template = {
+  x:40,
+  y:60,
+  radius: 9,
+  fill: 'purple',
+  stroke: 'black',
+  strokeWidth: 3
+ }
+
+var dot_output_true_template = {
+  x:200,
+  y:40,
+  radius: 9,
+  fill: 'green',
+  stroke: 'black',
+  strokeWidth: 3
+}
+
+var dot_output_false_template = {
+  x:200,
+  y:80,
+  radius: 9,
   fill: 'red',
   stroke: 'black',
-  strokeWidth: 4
+  strokeWidth: 3
 }
 
 var arrow_template = {
