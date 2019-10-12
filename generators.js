@@ -363,5 +363,5 @@ function set_brick_menu(brick){
 }
 
 function get_output_text(){
-    
+
 }
