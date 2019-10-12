@@ -5,6 +5,19 @@ body {
     background-color: #f0f0f0;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
+    outline: none;
+}
+
+button{
+    border: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
 }
 
 .game_container{
@@ -45,6 +58,7 @@ body {
     background-color: #bdb9b9;
     margin: 0 auto;
     border-radius: 6px;
+    margin-top: 5px;
 }
 
 .new_block_but{
@@ -53,12 +67,42 @@ body {
     height: 100%;
     width: 33%;
     background-color: #6495ed;
-    border: none;
     text-transform: uppercase;
     font-weight: bold;
+    float: left;
 }
 
 .new_block_but:hover{
+    background-color: grey;
+    color: white;
+}
+
+.some_block_but{
+    height: 100%;
+    width: 33%;
+    background-color: #6495ed;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+}
+
+.some_block_but:hover{
+    background-color: grey;
+    color: white;
+}
+
+.delete_block_but{
+    height: 100%;
+    width: 34%;
+    padding-right: 0;
+    background-color: #6495ed;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.delete_block_but:hover{
     background-color: grey;
     color: white;
 }
