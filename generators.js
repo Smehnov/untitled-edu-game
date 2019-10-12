@@ -2,6 +2,67 @@ function get_brick_id(){
     return ++last_brick_id
 }
 
+function generate_input_brick(id){
+    var brick_group = new Konva.Group(input_group_template)
+    var brick_block = new Konva.Rect(html_block_template)
+    var brick_dot_output= new Konva.Circle(dot_output_template)
+    var brick_name = new Konva.Text(input_text_template)
+
+    
+    brick_group.add(brick_block, brick_dot_output, brick_name)
+
+    brick_dot_output.on('click', ()=>{
+        console.log(1);
+        
+        if((current_state.choosed_obj != brick_dot_output) && (current_state.choosed_obj_type !='dot')){
+            current_state.choosed_obj = brick_dot_output
+            current_state.choosed_obj_type = 'dot'
+            brick_dot_output.fill(CHOOSED_DOT_COLOR)
+            layer.draw()
+    
+        }else if(current_state.choosed_obj == brick_dot_output){
+            current_state.choosed_obj = null
+            current_state.choosed_obj_type = null
+            brick_dot_output.fill(DOT_INPUT_COLOR)
+            layer.draw()
+           
+        }else if((current_state.choosed_obj != brick_dot_output)&&(current_state.choosed_obj_type=='dot')){
+            //Связываем две точки
+            
+            if(!(is_dot_in_dot_links(brick_dot_output) || is_dot_in_dot_links(current_state.choosed_obj))){
+                
+                
+                dot_links.push([current_state.choosed_obj, brick_dot_output])
+                console.log(dot_links);
+                update_arrows()
+            }
+            current_state.choosed_obj.fill(DOT_INPUT_COLOR)
+            current_state.choosed_obj = null
+            current_state.choosed_obj_type = null
+            layer.draw()
+        }
+    })
+
+    brick_group.on('dragend', ()=>{
+        update_arrows()
+    })
+
+    var input_brick = {
+        id:id,
+        brick:  brick_group,
+        type: "OUTPUT",
+        
+        inputs:{
+         'inp1': {
+            id: (id+'inp1'),
+            obj:brick_dot_output
+         }
+        }
+    }
+    return input_brick
+
+}
+
 function generate_output_brick(id){
     var brick_group = new Konva.Group(output_group_template)
     var brick_block = new Konva.Rect(html_block_template)
@@ -333,6 +394,12 @@ function spawn_html_brick(){
 function spawn_output_brick(){
     var output_brick = generate_output_brick(get_brick_id())
     layer.add(output_brick.brick)
+    layer.draw()
+}
+
+function spawn_input_brick(){
+    var input_brick = generate_input_brick(get_brick_id())
+    layer.add(input_brick.brick)
     layer.draw()
 }
 

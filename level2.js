@@ -16,7 +16,7 @@ document.getElementById("new_if_block_but").onclick = ()=>{
 
 spawn_output_brick()
 spawn_output_brick()
-
+spawn_input_brick()
 
 
 
