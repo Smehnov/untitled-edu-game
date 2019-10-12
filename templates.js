@@ -119,10 +119,19 @@ var html_block_template = {
 }
 
 var html_input_text_template = {
+  text: 'example.html',
+  fontFamily: 'Calibri',
+  fontSize: 18,
+  padding: 5,
+  fill: 'black',
+  name: 'input_text'
+}  
+
+var html_text_template = {
   x: 40,
   y: 50,
-  text: 'HTML',
-  fontSize: 35,
+  text: 'GetHtmlPage',
+  fontSize: 18,
   fontFamily: 'Calibri',
   fill: 'black',
   fontStyle: 'bold',
