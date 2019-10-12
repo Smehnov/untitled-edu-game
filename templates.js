@@ -16,18 +16,19 @@ var block_template = {
     shadowOffsetX : 5,
     shadowOffsetY : 3,
     shadowBlur : 20,
-    opacity : 0.5,
+    opacity : 0.6,
     cornerRadius: [5, 5, 5, 5]
   }
 
 var if_group_template = {
   x:0,
-  y:0
+  y:0,
+  dragable: true
 }  
 
 var dot_input_template = {
-  x:40,
-  y:60,
+  x:37,
+  y:67,
   radius: 9,
   fill: 'purple',
   stroke: 'black',
@@ -35,8 +36,8 @@ var dot_input_template = {
  }
 
 var dot_output_true_template = {
-  x:200,
-  y:40,
+  x:205,
+  y:45,
   radius: 9,
   fill: 'green',
   stroke: 'black',
@@ -44,8 +45,8 @@ var dot_output_true_template = {
 }
 
 var dot_output_false_template = {
-  x:200,
-  y:80,
+  x:205,
+  y:90,
   radius: 9,
   fill: 'red',
   stroke: 'black',
