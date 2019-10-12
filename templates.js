@@ -129,17 +129,17 @@ var html_input_text_template = {
 
 var html_text_template = {
   x: 40,
-  y: 50,
+  y: 35,
   text: 'GetHtmlPage',
   fontSize: 18,
   fontFamily: 'Calibri',
   fill: 'black',
   fontStyle: 'bold',
-  stroke: 'white',
-  strokeWidth: 0.5,
-  shadowOffsetX : 1,
+  /*stroke: 'white',
+  strokeWidth: 0.5,*/
+  /*shadowOffsetX : 1,
   shadowOffsetY : 1,
-  shadowBlur : 10,
+  shadowBlur : 10,*/
 }
 
 var dot_output_template = {
@@ -153,6 +153,13 @@ var dot_output_template = {
 }
 
 var html_group_template = {
+  x:40,
+  y:160,
+  draggable: true
+}  
+
+
+var output_group_template = {
   x:40,
   y:160,
   draggable: true
