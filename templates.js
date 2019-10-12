@@ -19,6 +19,7 @@ var if_group_template = {
 }  
 
 var block_template = {
+    name:'block',
     x: 20,
     y: 20,
     width: 200,
@@ -108,6 +109,7 @@ var arrow_template = {
 }  
 
 var html_block_template = {
+  name:'block',
   x: 20,
   y: 20,
   width: 200,
@@ -184,6 +186,7 @@ var output_group_template = {
 }  
 
 var output_block_template = {
+  name:'block',
   x: 20,
   y: 20,
   width: 200,
