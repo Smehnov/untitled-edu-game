@@ -202,7 +202,7 @@ function generate_if_brick(id){
     var brick_dot_output_true= new Konva.Circle(dot_output_true_template)
     var brick_dot_output_false= new Konva.Circle(dot_output_false_template)
     var brick_dot_input= new Konva.Circle(dot_input_template)
-    var block_input_text = new Konva.Text(input_text_template)
+    var block_input_text = new Konva.Text(html_input_text_template)
     var brick_input_label = new Konva.Label(input_label_template).add(block_input_text)
 
   
