@@ -45,7 +45,7 @@ var dot_input_template = {
   x:20,
   y:67,
   radius: 10,
-  fill: DOT_INPUT_FILL_COLOR,
+  fill: DOT_INPUT_COLOR,
   stroke: 'black',
   strokeWidth: 2
  }
@@ -54,7 +54,7 @@ var dot_output_true_template = {
   x:220,
   y:45,
   radius: 10,
-  fill: DOT_OUTPUT_TRUE_FILL_COLOR,
+  fill: DOT_OUTPUT_TRUE_COLOR,
   stroke: 'black',
   strokeWidth: 2
 }
@@ -63,7 +63,7 @@ var dot_output_false_template = {
   x:220,
   y:90,
   radius: 10,
-  fill: DOT_OUTPUT_FALSE_FILL_COLOR,
+  fill: DOT_OUTPUT_FALSE_COLOR,
   stroke: 'black',
   strokeWidth: 2
 }
