@@ -26,12 +26,17 @@ var block_template = {
     cornerRadius: [5, 5, 5, 5]
   }
 
+  var input_label_template = {
+    x: 100,
+    y:50,
+  }
+
 var input_text_template = {
-  x: 100,
-  y:50,
-  fill: 'black',
-  width: 50,
-  height: 25
+  text: 'Simple label',
+  fontFamily: 'Calibri',
+  fontSize: 18,
+  padding: 5,
+  fill: 'black'
 }  
 
 var if_text_template = {
