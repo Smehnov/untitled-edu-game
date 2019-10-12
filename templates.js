@@ -26,7 +26,7 @@ var block_template = {
     cornerRadius: [5, 5, 5, 5]
   }
 
-var text_template = {
+var if_text_template = {
   x: 50,
   y: 50,
   text: 'Simple Text',
