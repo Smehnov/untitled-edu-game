@@ -213,7 +213,7 @@ var output_text_template = {
 
 var input_group_template = {
   name: "input_brick",
-  x:260,
+  x:60,
   y:460,
   draggable: true,
   dragBoundFunc: function(pos) {
@@ -243,7 +243,7 @@ var input_block_template = {
 }
 
 var input_text_template = {
-  x: 25,
+  x: 95,
   y: 35,
   text: 'INPUT',
   fontSize: 20,
