@@ -1,5 +1,5 @@
 var last_brick_id = 0
-
+var is_level_completed = false
 
 
 var current_state = {

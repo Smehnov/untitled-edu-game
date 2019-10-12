@@ -29,6 +29,7 @@ document.getElementById("run_level_but").onclick = ()=>{
                 span_result.style.color="green"
                 document.getElementById('next_level_but').classList.add("active_next_level_but") 
                 span_result.innerHTML = "Читатель смог получить пост Васи, правда этим читателем был сам Вася("
+                is_level_completed=true
                 // УРОВЕНЬ ПРОЙДЕН
                 
             }else{
@@ -48,6 +49,13 @@ document.getElementById("run_level_but").onclick = ()=>{
      
 }
 // add the shape to the layer
+
+document.getElementById('next_level_but').onclick = ()=>{
+    if(is_level_completed==true){
+        window.location.href="./level2.html";
+    }
+}
+
 
 
 stage.add(layer);
