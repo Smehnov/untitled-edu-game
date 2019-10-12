@@ -340,7 +340,16 @@ function set_arrow_menu(arrow){
     if((brick_menu.choosed_brick) && (brick_menu.choosed_brick_type == 'brick')){
         brick_menu.choosed_brick.brick.findOne('.block').attrs.stroke='black';
     }
+    if((brick_menu.choosed_brick)&&(brick_menu.choosed_brick!=arrow) && (brick_menu.choosed_brick_type == 'arrow')){
+        brick_menu.choosed_brick.attrs.stroke='black';
+        brick_menu.choosed_brick.attrs.fill='black';
+    }
+    
+
+
     brick_menu.choosed_brick = arrow
+    brick_menu.choosed_brick.attrs.stroke='red';
+    brick_menu.choosed_brick.attrs.fill='red';
     brick_menu.choosed_brick_type = 'arrow'
     brick_menu.brick_name.innerHTML = "Arrow"
     brick_menu.delete_button.onclick = ()=>{
@@ -357,6 +366,10 @@ function set_brick_menu(brick){
     if((brick_menu.choosed_brick)&&(brick_menu.choosed_brick!=brick) && (brick_menu.choosed_brick_type == 'brick')){
         brick_menu.choosed_brick.brick.findOne('.block').attrs.stroke='black';
     }
+    if((brick_menu.choosed_brick)&&(brick_menu.choosed_brick!=brick) && (brick_menu.choosed_brick_type == 'arrow')){
+        brick_menu.choosed_brick.attrs.stroke='black';
+        brick_menu.choosed_brick.attrs.fill='black';
+    }
     brick_menu.choosed_brick_type = 'brick'
     brick_menu.choosed_brick = brick
     brick_menu.choosed_brick.brick.findOne('.block').attrs.stroke='white';
@@ -370,6 +383,11 @@ function set_brick_menu(brick){
         
         
         brick_text.text(brick_menu.brick_input.value)
+        layer.draw()
+    }
+    brick_menu.delete_button.onclick = ()=>{
+        brick_menu.choosed_brick.brick.remove()
+        brick_menu.choosed_brick=null
         layer.draw()
     }
 }
