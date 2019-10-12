@@ -337,8 +337,11 @@ function spawn_output_brick(){
 }
 
 function set_arrow_menu(arrow){
-
+    if((brick_menu.choosed_brick) && (brick_menu.choosed_brick_type == 'brick')){
+        brick_menu.choosed_brick.brick.findOne('.block').attrs.stroke='black';
+    }
     brick_menu.choosed_brick = arrow
+    brick_menu.choosed_brick_type = 'arrow'
     brick_menu.brick_name.innerHTML = "Arrow"
     brick_menu.delete_button.onclick = ()=>{
         dot_links.splice(arrows_list.indexOf(arrow), 1)
@@ -346,14 +349,23 @@ function set_arrow_menu(arrow){
         arrow.remove()
         layer.draw()
     }
+    layer.draw()
     console.log("arrow clicked");
 }
 
 function set_brick_menu(brick){
+    if((brick_menu.choosed_brick)&&(brick_menu.choosed_brick!=brick) && (brick_menu.choosed_brick_type == 'brick')){
+        brick_menu.choosed_brick.brick.findOne('.block').attrs.stroke='black';
+    }
+    brick_menu.choosed_brick_type = 'brick'
     brick_menu.choosed_brick = brick
+    brick_menu.choosed_brick.brick.findOne('.block').attrs.stroke='white';
+    layer.draw()
+    //brick_menu.choosed_brick.brick.findOne('.block').stroke("white")
     brick_menu.brick_name.innerHTML = brick.type + " block";
     var brick_text = brick.brick.findOne('.input_text')
     brick_menu.brick_input.placeholder = brick_text.text()
+    
     brick_menu.brick_input.onchange = ()=>{
         
         
