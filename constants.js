@@ -1,0 +1,1 @@
+const DOT_INPUT_FILL_COLOR = 'purple'
