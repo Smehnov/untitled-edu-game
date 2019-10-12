@@ -8,8 +8,8 @@ var stage_template = {
 var block_template = {
     x: 20,
     y: 20,
-    width: 100,
-    height: 50,
+    width: 200,
+    height: 100,
     fill: '#00D2FF',
     stroke: 'black',
     strokeWidth: 4,
@@ -20,14 +20,23 @@ var block_template = {
     cornerRadius: [5, 5, 5, 5]
   }
 
+var dot_template = {
+  x:50,
+  y:50,
+  radius: 10,
+  fill: 'red',
+  stroke: 'black',
+  strokeWidth: 4
+}
+
 var arrow_template = {
   x: 140,
   y: 180,
-  points: [10, 235, 100, 235],
-  pointerLength: 20,
-  pointerWidth: 20,
-  fill: 'white',
+  points: [10, 235, 200, 235],
+  pointerLength: 15,
+  pointerWidth: 15,
+  fill: 'black',
   stroke: 'black',
-  strokeWidth: 4,
+  strokeWidth: 5,
   id: 'arrow'
 }  
