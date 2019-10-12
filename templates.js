@@ -70,7 +70,7 @@ var dot_input_template = {
   x:123,
   y:20,
   radius: 10,
-  fill: DOT_INPUT_COLOR,
+  fill: DOT_COLOR,
   stroke: 'black',
   strokeWidth: 2,
   name: 'dot_input'
@@ -80,7 +80,7 @@ var dot_output_true_template = {
   x:70,
   y:118,
   radius: 10,
-  fill: DOT_OUTPUT_TRUE_COLOR,
+  fill: DOT_COLOR,
   stroke: 'black',
   strokeWidth: 2,
   name: 'dot_output_true'
@@ -90,7 +90,7 @@ var dot_output_false_template = {
   x:175,
   y:118,
   radius: 10,
-  fill: DOT_OUTPUT_FALSE_COLOR,
+  fill: DOT_COLOR,
   stroke: 'black',
   strokeWidth: 2,
   name: 'dot_output_false'
@@ -148,7 +148,7 @@ var dot_output_template = {
   x:120,
   y:118,
   radius: 10,
-  fill: DOT_OUTPUT_COLOR,
+  fill: DOT_COLOR,
   stroke: 'black',
   strokeWidth: 2,
   name: 'dot_output'
