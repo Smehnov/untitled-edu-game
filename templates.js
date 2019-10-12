@@ -20,6 +20,11 @@ var block_template = {
     cornerRadius: [5, 5, 5, 5]
   }
 
+var if_group_template = {
+  x:0,
+  y:0
+}  
+
 var dot_input_template = {
   x:40,
   y:60,
