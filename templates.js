@@ -53,12 +53,7 @@ var if_text_template = {
   fontSize: 35,
   fontFamily: 'Calibri',
   fill: 'black',
-  fontStyle: 'bold',
-  stroke: 'white',
-  strokeWidth: 0.5,
-  shadowOffsetX : 1,
-  shadowOffsetY : 1,
-  shadowBlur : 10,
+  fontStyle: 'bold'
 }
 
 var dot_input_template = {
@@ -119,27 +114,23 @@ var html_block_template = {
 }
 
 var html_input_text_template = {
+  x: -10,
+  y: 15,  
   text: 'example.html',
   fontFamily: 'Calibri',
-  fontSize: 18,
-  padding: 5,
+  fontSize: 20,
   fill: 'black',
   name: 'input_text'
 }  
 
 var html_text_template = {
-  x: 40,
+  x: 62,
   y: 35,
   text: 'GetHtmlPage',
-  fontSize: 18,
+  fontSize: 23,
   fontFamily: 'Calibri',
   fill: 'black',
-  fontStyle: 'bold',
-  /*stroke: 'white',
-  strokeWidth: 0.5,*/
-  /*shadowOffsetX : 1,
-  shadowOffsetY : 1,
-  shadowBlur : 10,*/
+  fontStyle: 'bold'
 }
 
 var dot_output_template = {
