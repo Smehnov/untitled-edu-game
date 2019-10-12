@@ -139,7 +139,7 @@ input:focus{
 }
 
 .delete_block_but{
-    width: 60%;
+    width: 50%;
     margin-bottom: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -157,7 +157,7 @@ input:focus{
 
 .reload_page_button{
     float: right;
-    width: 4.5em;
+    width: 5.5em;
     padding-top: 5%;
     padding-bottom: 5%;
     margin-right: 0.3em;
