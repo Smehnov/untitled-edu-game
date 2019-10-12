@@ -42,7 +42,8 @@ var input_text_template = {
   fontFamily: 'Calibri',
   fontSize: 20,
   padding: 5,
-  fill: 'black'
+  fill: 'black',
+  name: 'input_text'
 }  
 
 var if_text_template = {
@@ -66,7 +67,8 @@ var dot_input_template = {
   radius: 10,
   fill: DOT_INPUT_COLOR,
   stroke: 'black',
-  strokeWidth: 2
+  strokeWidth: 2,
+  name: 'dot_input'
  }
 
 var dot_output_true_template = {
@@ -75,7 +77,8 @@ var dot_output_true_template = {
   radius: 10,
   fill: DOT_OUTPUT_TRUE_COLOR,
   stroke: 'black',
-  strokeWidth: 2
+  strokeWidth: 2,
+  name: 'dot_output_true'
 }
 
 var dot_output_false_template = {
@@ -84,7 +87,8 @@ var dot_output_false_template = {
   radius: 10,
   fill: DOT_OUTPUT_FALSE_COLOR,
   stroke: 'black',
-  strokeWidth: 2
+  strokeWidth: 2,
+  name: 'dot_output_false'
 }
 
 var arrow_template = {
