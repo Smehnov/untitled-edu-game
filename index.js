@@ -31,6 +31,7 @@ var links = [
 
 
 var test_arrow = new Konva.Arrow(arrow_template);
+layer.add(test_arrow);
 layer.add(rect1.brick);
 
 
