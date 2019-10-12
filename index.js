@@ -5,7 +5,7 @@ var stage = new Konva.Stage(stage_template);
 
 var layer = new Konva.Layer();
 
-var rect1 = {
+/*var rect1 = {
     
     brick:  new Konva.Rect(block_template),
     type: "IF",
@@ -32,20 +32,22 @@ var rect2 = {
     }
 
 }
-
+*/
 
 var links = [
 
 
 ]
 // add the shape to the layer
-layer.add(rect1.brick);
+var if1 = generate_if()
+
+layer.add(if1.brick);
 
 
-var test_arrow = new Konva.Arrow(arrow_template);
-var test_dot = new Konva.Circle(dot_template)
-layer.add(test_dot)
-layer.add(test_arrow);
+//var test_arrow = new Konva.Arrow(arrow_template);
+//var test_dot = new Konva.Circle(dot_template)
+//layer.add(test_dot)
+//layer.add(test_arrow);
 
 
 
