@@ -27,19 +27,25 @@ var block_template = {
   }
 
 var if_text_template = {
-  x: 50,
+  x: 40,
   y: 50,
   text: 'IF',
-  fontSize: 30,
+  fontSize: 35,
   fontFamily: 'Calibri',
-  fill: 'green'
+  fill: 'black',
+  fontStyle: 'bold',
+  stroke: 'white',
+  strokeWidth: 0.5,
+  shadowOffsetX : 1,
+  shadowOffsetY : 1,
+  shadowBlur : 10,
 }
 
 var dot_input_template = {
   x:20,
   y:67,
   radius: 10,
-  fill: 'purple',
+  fill: DOT_INPUT_FILL_COLOR,
   stroke: 'black',
   strokeWidth: 2
  }
@@ -48,7 +54,7 @@ var dot_output_true_template = {
   x:220,
   y:45,
   radius: 10,
-  fill: 'green',
+  fill: DOT_OUTPUT_TRUE_FILL_COLOR,
   stroke: 'black',
   strokeWidth: 2
 }
@@ -57,7 +63,7 @@ var dot_output_false_template = {
   x:220,
   y:90,
   radius: 10,
-  fill: 'red',
+  fill: DOT_OUTPUT_FALSE_FILL_COLOR,
   stroke: 'black',
   strokeWidth: 2
 }
