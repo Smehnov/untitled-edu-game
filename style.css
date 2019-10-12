@@ -3,6 +3,7 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .game_container{
@@ -13,9 +14,26 @@ body {
     width: 75%;
 }
 .edit_form{
-    background-color: grey;
+    background-color: #bdb9b9;
     width: 25%;
     height: 300px;
     text-align: center;
     margin-top: 10%;
+    border-radius: 8px;
+    margin-right: 1%;
+}
+
+.input_text{
+    width: 90%;
+    margin-top: 60%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 13%;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+::placeholder{
+    color: black;
 }
