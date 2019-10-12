@@ -199,7 +199,7 @@ var output_block_template = {
 }
 
 var output_text_template = {
-  x: 43,
+  x: 25,
   y: 35,
   text: 'SERVER RESPONSE',
   fontSize: 20,
