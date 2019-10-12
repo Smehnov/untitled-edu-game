@@ -22,7 +22,7 @@ var block_template = {
     shadowOffsetX : 5,
     shadowOffsetY : 3,
     shadowBlur : 20,
-    opacity : 0.6,
+    opacity : 1,
     cornerRadius: [5, 5, 5, 5]
   }
 
