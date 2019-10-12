@@ -70,6 +70,11 @@ input:focus{
     font-family: 'Arial', Courier, monospace;
 }
 
+.run{
+    float: right;
+    margin-right: 4%;
+}
+
 .menu{
     width: 45%;
     height: 50px;
