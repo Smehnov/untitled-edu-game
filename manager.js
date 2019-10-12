@@ -10,6 +10,11 @@ var dot_links = [
     
 ]
 
+var brick_menu = {
+    brick_name: document.getElementById("block_name"),
+    brick_input: document.getElementById("block_input"),
+    choosed_brick: null
+}
 
 
 var arrows_list = []

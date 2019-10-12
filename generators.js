@@ -14,14 +14,7 @@ function generate_if_brick(id){
     var block_input_text = new Konva.Text(input_text_template)
     var brick_input_label = new Konva.Label(input_label_template).add(block_input_text)
 
-    //if_brick click
-    brick_block.on("click", ()=>{
-        current_state.choosed_obj = brick_group
-        current_state.choosed_obj_type = "brick"
-        
-    })
-
-    
+  
     //brick_dot_input click
     brick_dot_input.on('click', ()=>{
         console.log(1);
@@ -55,7 +48,6 @@ function generate_if_brick(id){
         }
     })
 
-    
     //brick_dot_output_false click
     brick_dot_output_false.on('click', ()=>{
         console.log(1);
@@ -88,8 +80,6 @@ function generate_if_brick(id){
             layer.draw()
         }
     })
-
-
 
     //brick_dot_output_true click
     brick_dot_output_true.on('click', ()=>{
@@ -124,15 +114,12 @@ function generate_if_brick(id){
         }
     })
 
-
-
-
     brick_group.add(brick_block, brick_text, brick_dot_input,brick_dot_output_true, brick_dot_output_false, brick_input_label)
-    
 
     brick_group.on('dragend', ()=>{
         update_arrows()
     })
+
     var if_brick = {
         id:id,
         brick:  brick_group,
@@ -155,6 +142,13 @@ function generate_if_brick(id){
         }
     
     }
+
+    brick_block.on("click", ()=>{
+        current_state.choosed_obj = brick_group
+        current_state.choosed_obj_type = "brick"
+        set_brick_menu(if_brick)
+        
+    })
 
     return if_brick
 }
@@ -195,4 +189,14 @@ function is_dot_in_dot_links(dot){
 function spawn_if_brick(){
     var if_brick = generate_if_brick(get_brick_id())
     layer.add(if_brick.brick)
+}
+
+
+function set_brick_menu(brick){
+    brick_menu.choosed_brick = brick
+    brick_menu.brick_name.innerHTML = brick.type + " block";
+    brick_menu.brick_input.onchange = ()=>{
+        var brick_text = brick.brick.findOne('.input_text')
+        brick_text.text(brick_menu.brick_name.innerHTML)
+    }
 }
