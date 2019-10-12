@@ -16,41 +16,50 @@ var block_template = {
     y: 20,
     width: 200,
     height: 100,
-    fill: '#00D2FF',
+    fill: '#6495ed',
     stroke: 'black',
     strokeWidth: 4,
-    shadowOffsetX : 5,
+    shadowOffsetX : 3,
     shadowOffsetY : 3,
     shadowBlur : 20,
     opacity : 1,
     cornerRadius: [5, 5, 5, 5]
   }
 
+var text_template = {
+  x: 50,
+  y: 50,
+  text: 'Simple Text',
+  fontSize: 30,
+  fontFamily: 'Calibri',
+  fill: 'green'
+}
+
 var dot_input_template = {
-  x:37,
+  x:20,
   y:67,
-  radius: 9,
+  radius: 10,
   fill: 'purple',
   stroke: 'black',
-  strokeWidth: 3
+  strokeWidth: 2
  }
 
 var dot_output_true_template = {
-  x:205,
+  x:220,
   y:45,
-  radius: 9,
+  radius: 10,
   fill: 'green',
   stroke: 'black',
-  strokeWidth: 3
+  strokeWidth: 2
 }
 
 var dot_output_false_template = {
-  x:205,
+  x:220,
   y:90,
-  radius: 9,
+  radius: 10,
   fill: 'red',
   stroke: 'black',
-  strokeWidth: 3
+  strokeWidth: 2
 }
 
 var arrow_template = {
