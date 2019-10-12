@@ -1,5 +1,9 @@
+function get_brick_id(){
+    return ++last_brick_id
+}
 
-function generate_if(id){
+
+function generate_if_brick(id){
     
     var brick_group = new Konva.Group(if_group_template)
     var brick_block = new Konva.Rect(block_template)
@@ -9,6 +13,14 @@ function generate_if(id){
     var brick_dot_input= new Konva.Circle(dot_input_template)
     var block_input_text = new Konva.Text(input_text_template)
     var brick_input_label = new Konva.Label(input_label_template).add(block_input_text)
+
+    //if_brick click
+    brick_block.on("click", ()=>{
+        current_state.choosed_obj = brick_group
+        current_state.choosed_obj_type = "brick"
+        
+    })
+
     
     //brick_dot_input click
     brick_dot_input.on('click', ()=>{
@@ -179,4 +191,8 @@ function is_dot_in_dot_links(dot){
     }
 
     return false
+}
+function spawn_if_brick(){
+    var if_brick = generate_if_brick(get_brick_id())
+    layer.add(if_brick.brick)
 }

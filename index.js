@@ -5,52 +5,13 @@ var stage = new Konva.Stage(stage_template);
 
 var layer = new Konva.Layer();
 
-/*var rect1 = {
-    
-    brick:  new Konva.Rect(block_template),
-    type: "IF",
-    inputs:{'inp1':''
-
-},
-    outputs:{
-     'true':'',
-     'false': ''
-    }
-
+document.getElementById("new_if_block_but").onclick = ()=>{
+    spawn_if_brick()
+    layer.draw()
 }
-
-var rect2 = {
-    
-    brick:  new Konva.Rect(block_template),
-    type: "IF",
-    inputs:{'inp1':''
-
-},
-    outputs:{
-     'true':'',
-     'false': ''
-    }
-
-}
-*/
 
 
 // add the shape to the layer
-var if1 = generate_if(124)
-var if2 = generate_if(156)
-var if3 = generate_if(1256)
-var if4 = generate_if(456)
-layer.add(if1.brick);
-layer.add(if2.brick);
-layer.add(if3.brick);
-layer.add(if4.brick);
-
-//var test_arrow = new Konva.Arrow(arrow_template);
-//var test_dot = new Konva.Circle(dot_template)
-//layer.add(test_dot)
-//layer.add(test_arrow);
 
 
-
-// add the layer to the stage
 stage.add(layer);
