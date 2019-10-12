@@ -2,6 +2,67 @@ function get_brick_id(){
     return ++last_brick_id
 }
 
+function generate_output_brick(id){
+    var brick_group = new Konva.Group(output_group_template)
+    var brick_block = new Konva.Rect(html_block_template)
+    var brick_dot_input= new Konva.Circle(dot_input_template)
+    var brick_name = new Konva.Text(output_text_template)
+
+    
+    brick_group.add(brick_block, brick_dot_input, brick_name)
+
+    brick_dot_input.on('click', ()=>{
+        console.log(1);
+        
+        if((current_state.choosed_obj != brick_dot_input) && (current_state.choosed_obj_type !='dot')){
+            current_state.choosed_obj = brick_dot_input
+            current_state.choosed_obj_type = 'dot'
+            brick_dot_input.fill(CHOOSED_DOT_COLOR)
+            layer.draw()
+    
+        }else if(current_state.choosed_obj == brick_dot_input){
+            current_state.choosed_obj = null
+            current_state.choosed_obj_type = null
+            brick_dot_input.fill(DOT_INPUT_COLOR)
+            layer.draw()
+           
+        }else if((current_state.choosed_obj != brick_dot_input)&&(current_state.choosed_obj_type=='dot')){
+            //Связываем две точки
+            
+            if(!(is_dot_in_dot_links(brick_dot_input) || is_dot_in_dot_links(current_state.choosed_obj))){
+                
+                
+                dot_links.push([current_state.choosed_obj, brick_dot_input])
+                console.log(dot_links);
+                update_arrows()
+            }
+            current_state.choosed_obj.fill(DOT_INPUT_COLOR)
+            current_state.choosed_obj = null
+            current_state.choosed_obj_type = null
+            layer.draw()
+        }
+    })
+
+    brick_group.on('dragend', ()=>{
+        update_arrows()
+    })
+
+    var output_brick = {
+        id:id,
+        brick:  brick_group,
+        type: "OUTPUT",
+        
+        inputs:{
+         'inp1': {
+            id: (id+'inp1'),
+            obj:brick_dot_input
+         }
+        }
+    }
+    return output_brick
+
+}
+
 function generate_html_brick(id){
     var brick_group = new Konva.Group(html_group_template)
     var brick_block = new Konva.Rect(html_block_template)
@@ -268,8 +329,22 @@ function spawn_html_brick(){
     layer.add(html_brick.brick)
     layer.draw()
 }
+function spawn_output_brick(){
+    var output_brick = generate_output_brick(get_brick_id())
+    layer.add(output_brick.brick)
+    layer.draw()
+}
 
 function set_arrow_menu(arrow){
+
+    brick_menu.choosed_brick = arrow
+    brick_menu.brick_name.innerHTML = "Arrow"
+    brick_menu.delete_button.onclick = ()=>{
+        dot_links.splice(arrows_list.indexOf(arrow), 1)
+        arrows_list.splice(arrows_list.indexOf(arrow), 1)
+        arrow.remove()
+        layer.draw()
+    }
     console.log("arrow clicked");
 }
 

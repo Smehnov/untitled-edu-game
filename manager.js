@@ -10,14 +10,17 @@ var dot_links = [
     
 ]
 
+var arrows_list = []
+
 var brick_menu = {
     brick_name: document.getElementById("block_name"),
     brick_input: document.getElementById("block_input"),
+    delete_button:document.getElementById("delete_block_but"),
     choosed_brick: null,
     choosed_brick_type:null
 }
 
 
-var arrows_list = []
+
 
 ifs_list=[]
