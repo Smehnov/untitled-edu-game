@@ -193,10 +193,15 @@ function spawn_if_brick(){
 
 
 function set_brick_menu(brick){
+    console.log(1);
+    
     brick_menu.choosed_brick = brick
     brick_menu.brick_name.innerHTML = brick.type + " block";
     brick_menu.brick_input.onchange = ()=>{
         var brick_text = brick.brick.findOne('.input_text')
-        brick_text.text(brick_menu.brick_name.innerHTML)
+        
+        
+        brick_text.text(brick_menu.brick_input.value)
+        layer.draw()
     }
 }
