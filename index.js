@@ -38,8 +38,12 @@ var rect2 = {
 // add the shape to the layer
 var if1 = generate_if(124)
 var if2 = generate_if(156)
+var if3 = generate_if(1256)
+var if4 = generate_if(456)
 layer.add(if1.brick);
 layer.add(if2.brick);
+layer.add(if3.brick);
+layer.add(if4.brick);
 
 //var test_arrow = new Konva.Arrow(arrow_template);
 //var test_dot = new Konva.Circle(dot_template)
