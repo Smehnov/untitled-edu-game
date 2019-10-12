@@ -65,8 +65,7 @@ input:focus{
     background-color: #bdb9b9;
     margin: 0 auto;
     border-radius: 6px;
-    margin-top: 1%;
-    margin-bottom: 2%;
+    margin-top: 5px;
 }
 
 .new_block_but{
