@@ -1,13 +1,13 @@
 var stage_template = {
   container: 'container',
   width: (window.innerWidth*0.75),
-  height: (window.innerHeight*0.85),
+  height: (window.innerHeight),
   draggable:true
 }
 
 var if_group_template = {
-  x:0,
-  y:0,
+  x:40,
+  y:160,
   draggable: true
 }  
 
@@ -55,8 +55,8 @@ var if_text_template = {
 }
 
 var dot_input_template = {
-  x:20,
-  y:67,
+  x:120,
+  y:20,
   radius: 10,
   fill: DOT_INPUT_COLOR,
   stroke: 'black',
@@ -64,8 +64,8 @@ var dot_input_template = {
  }
 
 var dot_output_true_template = {
-  x:220,
-  y:45,
+  x:70,
+  y:118,
   radius: 10,
   fill: DOT_OUTPUT_TRUE_COLOR,
   stroke: 'black',
@@ -73,8 +73,8 @@ var dot_output_true_template = {
 }
 
 var dot_output_false_template = {
-  x:220,
-  y:90,
+  x:175,
+  y:118,
   radius: 10,
   fill: DOT_OUTPUT_FALSE_COLOR,
   stroke: 'black',
