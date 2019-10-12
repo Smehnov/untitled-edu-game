@@ -152,3 +152,10 @@ input:focus{
     text-align: left;
     padding: 4px 4px;
 }
+
+.for_blocks{
+    width: 90%;
+    margin: 3% auto;
+    border: 2px solid black;
+    border-radius: 8px;
+}
