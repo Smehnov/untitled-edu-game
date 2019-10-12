@@ -93,6 +93,22 @@ input:focus{
     color: white;
 }
 
+.new_block_inactive_but{
+    height: 100%;
+    width: 33%;
+    background-color: "gray";
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+}
+.new_block_inactive_but:hover{
+    height: 100%;
+    width: 33%;
+    background-color: "gray";
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+}
 .left-but{
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;

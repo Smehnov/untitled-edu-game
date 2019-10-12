@@ -9,9 +9,15 @@ var stage_template = {
       y: pos.y
     }
   }
-}
+} 
 
 var if_group_template = {
+  x:40,
+  y:160,
+  draggable: true
+}  
+
+var html_group_template = {
   x:40,
   y:160,
   draggable: true
@@ -32,10 +38,10 @@ var block_template = {
     cornerRadius: [5, 5, 5, 5]
   }
 
-  var input_label_template = {
-    x: 80,
-    y:50,
-  }
+var input_label_template = {
+  x: 80,
+  y:50,
+}
 
 var input_text_template = {
   text: 'Simple label',
