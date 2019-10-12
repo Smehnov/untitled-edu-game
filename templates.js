@@ -2,8 +2,14 @@ var stage_template = {
   container: 'container',
   width: window.innerWidth,
   height: window.innerHeight,
-  dragable:true
+  draggable:true
 }
+
+var if_group_template = {
+  x:0,
+  y:0,
+  draggable: true
+}  
 
 var block_template = {
     x: 20,
@@ -19,12 +25,6 @@ var block_template = {
     opacity : 0.6,
     cornerRadius: [5, 5, 5, 5]
   }
-
-var if_group_template = {
-  x:0,
-  y:0,
-  dragable: true
-}  
 
 var dot_input_template = {
   x:37,
