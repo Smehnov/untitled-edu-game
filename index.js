@@ -34,10 +34,7 @@ var rect2 = {
 }
 */
 
-var links = [
 
-
-]
 // add the shape to the layer
 var if1 = generate_if(124)
 var if2 = generate_if(156)
