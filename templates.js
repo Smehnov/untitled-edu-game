@@ -66,7 +66,7 @@ var if_text_template = {
 }
 
 var dot_input_template = {
-  x:120,
+  x:123,
   y:20,
   radius: 10,
   fill: DOT_INPUT_COLOR,
@@ -198,10 +198,10 @@ var output_block_template = {
 }
 
 var output_text_template = {
-  x: 40,
+  x: 43,
   y: 35,
   text: 'SERVER RESPONSE',
-  fontSize: 18,
+  fontSize: 20,
   fontFamily: 'Calibri',
   fill: 'black',
   fontStyle: 'bold'
