@@ -46,7 +46,7 @@ input:focus{
 .input_text{
     width: 90%;
     margin-top: 80%;
-    margin-bottom: 80%;
+    margin-bottom: 50%;
     background-color: #dbd5d5;
     border: 2px solid black;
     border-radius: 6px;
@@ -80,8 +80,6 @@ input:focus{
 }
 
 .new_block_but{
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
     height: 100%;
     width: 33%;
     background-color: #6495ed;
@@ -95,32 +93,28 @@ input:focus{
     color: white;
 }
 
-.some_block_but{
-    height: 100%;
-    width: 33%;
-    background-color: #6495ed;
-    text-transform: uppercase;
-    font-weight: bold;
-    float: left;
-}
-
-.some_block_but:hover{
-    background-color: grey;
-    color: white;
-}
-
-.delete_block_but{
-    height: 100%;
+.left-but{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     width: 34%;
-    padding-right: 0;
-    background-color: #6495ed;
-    text-transform: uppercase;
-    font-weight: bold;
+}
+
+.right-but{
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
+.delete_block_but{
+    width: 60%;
+    margin-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #f01818;
+}
+
 .delete_block_but:hover{
-    background-color: grey;
-    color: white;
+    background-color: red;
 }

@@ -22,7 +22,7 @@ var block_template = {
     y: 20,
     width: 200,
     height: 100,
-    fill: '#6495ed',
+    fill: BLOCK_COLOR,
     stroke: 'black',
     strokeWidth: 4,
     shadowOffsetX : 3,
