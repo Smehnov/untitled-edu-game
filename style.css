@@ -36,11 +36,11 @@ input:focus{
     background-color: #bdb9b9;
     width: 25%;
     height: 100%;
-    text-align: center;
+    text-align: center;/*
     margin-top: 1%;
     border-radius: 8px;
     margin-right: 1%;
-    margin-bottom: 5%;
+    margin-bottom: 5%;*/
 }
 
 .input_text{
@@ -56,7 +56,7 @@ input:focus{
 
 ::placeholder{
     color: black;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .menu{
