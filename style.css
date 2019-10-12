@@ -92,7 +92,7 @@ input:focus{
 }
 
 .menu{
-    width: 60%;
+    width: 50%;
     height: 50px;
     background-color: #bdb9b9;
     margin: 0 auto;
@@ -222,7 +222,7 @@ input:focus{
 
 .main_menu{
     height: 5.5em;
-    margin-left: 25%;
+    /*margin-left: 25%;*/
 }
 
 .next_level_but{
@@ -233,6 +233,30 @@ input:focus{
     margin-top: 1em;
     margin-right: 4em;
     border-radius: 8px;
+}
+.active_next_level_but{
+    background-color: green;
+    color: white;
+}
+.active_next_level_but:hover{
+    background-color: #00bb00;
+    color: white;
+    transition: 0.5s;
+}
+
+.active_next_level_but:not(:hover){
+    transition: 0.5s;
+}
+
+.last_level_but{
+    float: left;
+    width: 13em;
+    height: 3.8em;
+    background-color: #777777;
+    margin-top: 1em;
+    margin-left: 1em;
+    border-radius: 8px;
+    margin-right: 10%;
 }
 .active_next_level_but{
     background-color: green;

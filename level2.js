@@ -29,6 +29,10 @@ document.getElementById('next_level_but').onclick = ()=>{
     }
 }
 
+document.getElementById('last_level_but').onclick = ()=>{
+        window.location.href="./level1.html";
+}
+
 
 
 stage.add(layer);
