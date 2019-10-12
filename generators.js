@@ -322,6 +322,7 @@ function is_dot_in_dot_links(dot){
 function spawn_if_brick(){
     var if_brick = generate_if_brick(get_brick_id())
     layer.add(if_brick.brick)
+    layer.draw()
 }
 
 function spawn_html_brick(){

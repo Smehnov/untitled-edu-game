@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/konva@4.0.14/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Untitled edu game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main_menu">
+        <div class="menu">
+            <button id="new_html_block_but" class="new_block_but left-but">new html page block</button>
+            <button id="new_if_block_but" class=" new_block_but">new IF block</button>
+            <button id="none_block_but" class="right-but new_block_inactive_but">two button</button>
+        </div>
+        <button class="next_level_but" id="next_level_but">NEXT LEVEL</button>
+    </div>
+    <div class="game_container">
+        <div id="container"></div>
+        <div class="edit_form" action="">
+            <div class="number_of_level">Level #2</div>
+            <button class="run" id="run_level_but">RUN</button>
+            <div class="message"> Василий написал файл first_post.html. Помогите ему отправить его читателю, для этого
+                создайте Html Block и соедените его с блоком Server Response
+                <br><br>Результат:<br> <span id="result"></span>
+
+            </div>
+            <div class="for_blocks">
+                <div class="label" id="block_name">Name of block</div>
+                <input id="block_input" type="text" name="" class="input_text" placeholder="write your command...">
+                <button id="delete_block_but" class="delete_block_but">delete</button>
+                <button onClick="window.location.reload();" class="reload_page_button">RELOAD</button>
+            </div>
+        </div>
+    </div>
+    <script src="./manager.js"></script>
+    <script src="./constants.js"></script>
+    <script src="./templates.js"></script>
+    <script src="./generators.js"></script>
+    <script src="./level2.js"></script>
+</body>
+
+</html>

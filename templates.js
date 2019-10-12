@@ -154,7 +154,7 @@ var dot_output_template = {
 
 var html_group_template = {
   name:"html_brick",
-  x:40,
+  x:540,
   y:160,
   draggable: true,
   dragBoundFunc: function(pos) {
