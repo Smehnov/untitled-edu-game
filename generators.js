@@ -2,6 +2,9 @@ function get_brick_id(){
     return ++last_brick_id
 }
 
+function generate_html_brick(id){
+
+}
 
 function generate_if_brick(id){
     
@@ -156,6 +159,9 @@ function generate_if_brick(id){
 function generateArrow(x1, y1, x2, y2){
     var arrow = new Konva.Arrow(arrow_template)
     arrow.points([x1, y1, x2, y2])
+    arrow.on('click', ()=>{
+        set_arrow_menu(arrow)
+    })
     layer.add(arrow)
     return arrow
 }
@@ -183,7 +189,6 @@ function is_dot_in_dot_links(dot){
             return true
         }
     }
-
     return false
 }
 function spawn_if_brick(){
@@ -191,10 +196,11 @@ function spawn_if_brick(){
     layer.add(if_brick.brick)
 }
 
+function set_arrow_menu(arrow){
+    console.log("arrow clicked");
+}
 
 function set_brick_menu(brick){
-    console.log(1);
-    
     brick_menu.choosed_brick = brick
     brick_menu.brick_name.innerHTML = brick.type + " block";
     brick_menu.brick_input.onchange = ()=>{
