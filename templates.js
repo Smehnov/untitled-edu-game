@@ -1,7 +1,7 @@
 var stage_template = {
   container: 'container',
   width: (window.innerWidth*0.75),
-  height: window.innerHeight,
+  height: (window.innerHeight*0.90),
   draggable:true
 }
 
@@ -27,14 +27,14 @@ var block_template = {
   }
 
   var input_label_template = {
-    x: 100,
+    x: 80,
     y:50,
   }
 
 var input_text_template = {
   text: 'Simple label',
   fontFamily: 'Calibri',
-  fontSize: 18,
+  fontSize: 20,
   padding: 5,
   fill: 'black'
 }  
