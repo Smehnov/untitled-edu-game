@@ -17,18 +17,12 @@ var if_group_template = {
   draggable: true
 }  
 
-var html_group_template = {
-  x:40,
-  y:160,
-  draggable: true
-}  
-
 var block_template = {
     x: 20,
     y: 20,
     width: 200,
     height: 100,
-    fill: BLOCK_COLOR,
+    fill: IF_BLOCK_COLOR,
     stroke: 'black',
     strokeWidth: 4,
     shadowOffsetX : 3,
@@ -36,7 +30,7 @@ var block_template = {
     shadowBlur : 20,
     opacity : 1,
     cornerRadius: [5, 5, 5, 5]
-  }
+}
 
 var input_label_template = {
   x: 80,
@@ -107,4 +101,50 @@ var arrow_template = {
   stroke: 'black',
   strokeWidth: 5,
   id: 'arrow'
+}  
+
+var html_block_template = {
+  x: 20,
+  y: 20,
+  width: 200,
+  height: 100,
+  fill: HTML_BLOCK_COLOR,
+  stroke: 'black',
+  strokeWidth: 4,
+  shadowOffsetX : 3,
+  shadowOffsetY : 3,
+  shadowBlur : 20,
+  opacity : 1,
+  cornerRadius: [5, 5, 5, 5]
+}
+
+var input_text_template = {
+  x: 40,
+  y: 50,
+  text: 'HTML',
+  fontSize: 35,
+  fontFamily: 'Calibri',
+  fill: '',
+  fontStyle: 'bold',
+  stroke: 'white',
+  strokeWidth: 0.5,
+  shadowOffsetX : 1,
+  shadowOffsetY : 1,
+  shadowBlur : 10,
+}
+
+var dot_output_template = {
+  x:70,
+  y:118,
+  radius: 10,
+  fill: DOT_OUTPUT_COLOR,
+  stroke: 'black',
+  strokeWidth: 2,
+  name: 'dot_output'
+}
+
+var html_group_template = {
+  x:40,
+  y:160,
+  draggable: true
 }  
