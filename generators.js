@@ -3,7 +3,72 @@ function get_brick_id(){
 }
 
 function generate_html_brick(id){
+    var brick_group = new Konva.Group(html_group_template)
+    var brick_block = new Konva.Rect(html_block_template)
+    var brick_dot_output= new Konva.Circle(dot_output_template)
+    var block_input_text = new Konva.Text(html_input_text_template)
+    var brick_input_label = new Konva.Label(input_label_template).add(block_input_text)
 
+    brick_input_label.add(block_input_text)
+    brick_group.add(brick_block, brick_input_label, brick_dot_output)
+
+    brick_dot_output.on('click', ()=>{
+        console.log(1);
+        
+        if((current_state.choosed_obj != brick_dot_output) && (current_state.choosed_obj_type !='dot')){
+            current_state.choosed_obj = brick_dot_output
+            current_state.choosed_obj_type = 'dot'
+            brick_dot_output.fill(CHOOSED_DOT_COLOR)
+            layer.draw()
+    
+        }else if(current_state.choosed_obj == brick_dot_output){
+            current_state.choosed_obj = null
+            current_state.choosed_obj_type = null
+            brick_dot_output.fill(DOT_INPUT_COLOR)
+            layer.draw()
+           
+        }else if((current_state.choosed_obj != brick_dot_output)&&(current_state.choosed_obj_type=='dot')){
+            //Связываем две точки
+            
+            if(!(is_dot_in_dot_links(brick_dot_output) || is_dot_in_dot_links(current_state.choosed_obj))){
+                
+                
+                dot_links.push([current_state.choosed_obj, brick_dot_output])
+                console.log(dot_links);
+                update_arrows()
+            }
+            current_state.choosed_obj.fill(DOT_INPUT_COLOR)
+            current_state.choosed_obj = null
+            current_state.choosed_obj_type = null
+            layer.draw()
+        }
+    })
+
+    brick_group.on('dragend', ()=>{
+        update_arrows()
+    })
+
+    brick_block.on("click", ()=>{
+        current_state.choosed_obj = brick_group
+        current_state.choosed_obj_type = "brick_html"
+        set_brick_menu(html_brick)
+        
+    })
+
+    var html_brick = {
+        id:id,
+        brick:  brick_group,
+        type: "HTML",
+        
+        outputs:{
+         'out1': {
+            id: (id+'out1'),
+            obj:brick_dot_output
+         }
+        }
+    }
+    return html_brick
+    
 }
 
 function generate_if_brick(id){
@@ -191,9 +256,16 @@ function is_dot_in_dot_links(dot){
     }
     return false
 }
+
 function spawn_if_brick(){
     var if_brick = generate_if_brick(get_brick_id())
     layer.add(if_brick.brick)
+}
+
+function spawn_html_brick(){
+    var html_brick = generate_html_brick(get_brick_id())
+    layer.add(html_brick.brick)
+    layer.draw()
 }
 
 function set_arrow_menu(arrow){
@@ -203,8 +275,9 @@ function set_arrow_menu(arrow){
 function set_brick_menu(brick){
     brick_menu.choosed_brick = brick
     brick_menu.brick_name.innerHTML = brick.type + " block";
+    var brick_text = brick.brick.findOne('.input_text')
+    brick_menu.brick_input.placeholder = brick_text.text()
     brick_menu.brick_input.onchange = ()=>{
-        var brick_text = brick.brick.findOne('.input_text')
         
         
         brick_text.text(brick_menu.brick_input.value)
