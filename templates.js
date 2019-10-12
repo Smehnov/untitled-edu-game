@@ -210,3 +210,44 @@ var output_text_template = {
   fill: 'black',
   fontStyle: 'bold'
 }
+
+var input_group_template = {
+  name: "input_brick",
+  x:260,
+  y:460,
+  draggable: true,
+  dragBoundFunc: function(pos) {
+    var newX = pos.x < 0 ? 0 : pos.x;
+    var newX = newX > 1150? 1150 : newX;
+    return {
+      x: newX,
+      y: pos.y
+    };
+  }
+}  
+
+var input_block_template = {
+  name:'block',
+  x: 20,
+  y: 20,
+  width: 200,
+  height: 100,
+  fill: INPUT_BLOCK_COLOR,
+  stroke: 'black',
+  strokeWidth: 4,
+  shadowOffsetX : 3,
+  shadowOffsetY : 3,
+  shadowBlur : 20,
+  opacity : 1,
+  cornerRadius: [5, 5, 5, 5]
+}
+
+var input_text_template = {
+  x: 25,
+  y: 35,
+  text: 'INPUT',
+  fontSize: 20,
+  fontFamily: 'Calibri',
+  fill: 'black',
+  fontStyle: 'bold'
+}
