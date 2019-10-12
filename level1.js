@@ -25,7 +25,7 @@ document.getElementById("run_level_but").onclick = ()=>{
         if(arr[1]==output_input_dot){
             found_link = true
             var html_brick = arr[0].findAncestor('.html_brick')
-            if((html_brick.findOne(".input_text").text()=="first_post.html")&&(arr[0].attrs.name=='dot_input')){
+            if((html_brick.findOne(".input_text").text()=="first_post.html")&&(arr[0].attrs.name=='dot_output')){
                 span_result.style.color="green"
                 document.getElementById('next_level_but').classList.add("active_next_level_but") 
                 span_result.innerHTML = "Читатель смог получить пост Васи, правда этим читателем был сам Вася("
