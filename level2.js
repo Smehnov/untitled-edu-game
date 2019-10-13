@@ -112,17 +112,7 @@ var cond2 = false
 
                                     break
                                 }
-                            }
-
-
-
-
-
-
-
-
-                            
-                            
+                            }  
                         }else{
                             span_result.style.color="red"
                             span_result.innerHTML = "Проверьте подключение IF-BLOCK <br>"
@@ -140,18 +130,6 @@ var cond2 = false
                     }
                     
                 }
-                
-
-
-
-
-
-
-                /*span_result.style.color="green"
-                document.getElementById('next_level_but').classList.add("active_next_level_but") 
-                span_result.innerHTML = "Читатель смог получить пост Васи, правда этим читателем был сам Вася("
-                is_level_completed=true*/
-                // УРОВЕНЬ ПРОЙДЕН
               break  
             }else{
                 span_result.style.color="red"
@@ -250,28 +228,15 @@ var cond2 = false
 
                                     break
                                 }
-                            }
-
-
-
-
-
-
-
-
-                            
-                            
+                            }                       
                         }else{
                             span_result.style.color="red"
                             span_result.innerHTML = "Проверьте подключение IF-BLOCK <br>"
                         }
 
                         break
-                    }
-                        
-
-                        
-                    }
+                    }                                              
+                }
                     if(found_link2==false){
                         span_result.style.color="red"
                         span_result.innerHTML = "Не найден путь в html block<br>"
