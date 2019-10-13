@@ -27,27 +27,53 @@ document.getElementById("run_level_but").onclick = ()=>{
     var output = layer.findOne('.output_brick')
     var db = layer.findOne('.db_brick')
     var base = layer.findOne('.base_brick')
-    var db_output_dot = db.findOne('dot_output')
-    var output__base_dot = base.findOne('dot_output')
+    var input = layer.findOne('.input_brick')
+
+    var db_output_dot = db.findOne('.dot_output')
+    var db_input_dot2 = db.findOne('.dot_input2')
+    var db_input_dot4 = db.findOne('.dot_input4')
+    var base_output_dot = base.findOne('.dot_output')
     var output_input_dot = output.findOne('.dot_input')
+    var input_output_dot = input.findOne('.dot_output')
+
+    var text1 = db.findOne('.input_text1')
+    var text2 = db.findOne('.input_text2')
+    var text3 = db.findOne('.input_text3')
+    var text4 = db.findOne('.input_text4')
+
     console.log(output_input_dot);
     var span_result = document.getElementById('result')
     var found_link = false
 
     for (let i = 0; i < dot_links.length; i++) {
         arr = dot_links[i];
-        console.log(arr);
         
         if(arr[1]==output_input_dot){
             found_link = true
-            var html_brick = arr[0].findAncestor('.html_brick')
-            if((html_brick.findOne(".input_text").text()=="")&&(arr[0].attrs.name=='dot_output')){
-                span_result.style.color="green"
-                document.getElementById('next_level_but').classList.add("active_next_level_but") 
-                span_result.innerHTML = "Читатель смог получить пост Васи, правда этим читателем был сам Вася("
-                is_level_completed=true
-                // УРОВЕНЬ ПРОЙДЕН
+            var found_form = false
+            for (let i = 0; i < dot_links.length; i++) {
+                var arr1 = dot_links[i];
+                if (arr1[1] == db_input_dot2 && arr[0]==db.db_input_dot2){
+                    found_form = true
+                    text2.text("DATABASE1")
+                    
+                    var found_id = false
+                    for (let i = 0; i < dot_links.length; i++) {
+                        var arr2 = dot_links[i];
+                        if(arr2[1]==db_dot4_input_template){
+                            
+                        }
+                        
+                    }
+                }
                 
+            }
+            if(!found_form){
+                span_result.style.color="red"
+                span_result.innerHTML = "База данных не передана в запрос"
+            }
+                
+            
             }else{
                 span_result.style.color="red"
                 span_result.innerHTML = "Документ .html не передан в Server Response <br>"
@@ -56,13 +82,20 @@ document.getElementById("run_level_but").onclick = ()=>{
             
         }
         
-    }
+    
     if(!found_link){
         span_result.style.color="red"
         span_result.innerHTML = "Ничего не передано в Server Response <br>"
     }
     
-     
+     /*var html_brick = arr[0].findAncestor('.html_brick')
+            if((html_brick.findOne(".input_text").text()=="")&&(arr[0].attrs.name=='dot_output')){
+                span_result.style.color="green"
+                document.getElementById('next_level_but').classList.add("active_next_level_but") 
+                span_result.innerHTML = "Читатель смог получить пост Васи, правда этим читателем был сам Вася("
+                is_level_completed=true
+                // УРОВЕНЬ ПРОЙДЕН
+              */  
 }
 
 

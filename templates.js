@@ -457,12 +457,12 @@ var db_dot4_input_template = {
   fill: DOT_COLOR,
   stroke: 'black',
   strokeWidth: 2,
-  name: 'dot_input2'
+  name: 'dot_input4'
 }
 
 
 var base_group_template = {
-  name: "output_brick",
+  name: "base_brick",
   x:280,
   y:20,
   draggable: true,

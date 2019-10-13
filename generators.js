@@ -88,6 +88,7 @@ function generate_db_brick(id){
     var dot_output = new Konva.Circle(db_dot_output_template)
 
     var text1={
+        type: "Text",
         brick:text1_group
     }
     text1_group.on("click", ()=>{
@@ -98,6 +99,7 @@ function generate_db_brick(id){
     })
 
     var text3={
+        type: "Text",
         brick:text3_group
     }
     text3_group.on("click", ()=>{
