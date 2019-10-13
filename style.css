@@ -139,10 +139,6 @@ input:focus{
     /*transition: 0.75s;*/
 }
 
-.new_block_inactive_but:not(:hover){
-    /*transition: 0.75s;*/
-}
-
 .left-but{
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
