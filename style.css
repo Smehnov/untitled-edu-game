@@ -136,11 +136,11 @@ input:focus{
     text-transform: uppercase;
     font-weight: bold;
     float: left;
-    transition: 0.75s;
+    /*transition: 0.75s;*/
 }
 
 .new_block_inactive_but:not(:hover){
-    transition: 0.75s;
+    /*transition: 0.75s;*/
 }
 
 .left-but{
@@ -152,6 +152,17 @@ input:focus{
 .right-but{
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+}
+
+.new_block_inactive_but_level3{
+    height: 100%;
+    width: 34%;
+    background-color: "gray";
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 .delete_block_but{
