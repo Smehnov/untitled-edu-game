@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,26 @@
   <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
   <script src="./bootstrap/bootstrap.min.js"></script>
 </head>
+
 <body>
-  <h1>VASYA THE GAME</h1>
+  <div class="container">
+    <h1>VASYA THE GAME</h1>
     <p>Вася всегда мечтал вести свой блог.</p>
     <img src="./img/1.jpg" alt="VASYA" srcset="">
     <p>Но, так как Вася терпеть не может видеоблогеров, он решил вести блог в текстовом формате.</p>
     <img src="./img/2.jpg" alt="" srcset="">
-    <p>Вася боится злобных капиталистов, которые владеют всеми конструкторами сайтов, ведь они могут похитить его гениальные мысли.</p>
+    <p>Вася боится злобных капиталистов, которые владеют всеми конструкторами сайтов, ведь они могут похитить его
+      гениальные мысли.</p>
+      <img src="./img/wix.jpg" alt="">
     <p>Именно поэтому он решил написать сайт для блога самостоятельно.</p>
     <p>Помогите Василию сделать это, составив блок-схему серверной составляющей сайта.</p>
-  <section class="main-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4"></div>
-      </div>
-    </div>
-  </section>
+    <button id="game">ИГРАТЬ!</button>
+    <script>
+      document.getElementById('game').onclick = () => {
+          window.location.href = "./level1.html";
+        }
+    </script>
+  </div>
 </body>
+
 </html>

@@ -1,9 +1,52 @@
-h1{
-    font-size:40em;
+h1 {
+    position: relative;
+    left: 27.5%;
+    z-index: 2;
+    background: #808991;
+    color: #FFF;
+    margin-top: 2em !important;
     text-align: center;
-    padding-top:1em;
-    padding-bottom:0.5em; 
+    max-width: 500px;
+    font-size: 20px;
+    border: 4px ridge black;
+    cursor: pointer;
+    transition: 3s linear;
+  }
+h1:hover {
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
+
+.container{
+    text-align: center;
+}
+
 p{
+    padding-top: 0.5em;
     font-size: 2em;
+}
+
+#game{
+    width: 50%;
+    height: 5em;
+    margin-bottom: 2em;
+    font-size: 3em;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+#game:hover{
+    transition: 0.5s;
+    background-color: green;
+}
+
+#game:not(:hover){
+    transition: 0.5s;
+}
+
+#game:focus{
+    outline: none;
 }
