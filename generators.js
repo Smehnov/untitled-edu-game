@@ -41,7 +41,9 @@ function generate_base_brick(id){
             layer.draw()
         }
     })
-
+brick_group.on('dragmove',()=>{
+    update_arrows()
+})
     var base_brick = {
         id:id,
         brick:  brick_group,
