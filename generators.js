@@ -6,10 +6,15 @@ function generate_input_brick(id){
     var brick_group = new Konva.Group(input_group_template)
     var brick_block = new Konva.Rect(html_block_template)
     var brick_dot_output= new Konva.Circle(dot_output_template)
+    var block_input_text = new Konva.Text(html_input_text_template)
+    if(cur_level==2) block_input_text.text("1.html/2.html")
+    if(cur_level==3) block_input_text.text("1.html/2.html")
+    block_input_text.x(70)
+    block_input_text.y(80)
     var brick_name = new Konva.Text(input_text_template)
 
     
-    brick_group.add(brick_block, brick_dot_output, brick_name)
+    brick_group.add(brick_block, brick_dot_output,block_input_text, brick_name)
 
     brick_dot_output.on('click', ()=>{
         console.log(1);

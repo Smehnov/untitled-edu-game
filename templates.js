@@ -12,6 +12,7 @@ var stage_template = {
 } 
 
 var if_group_template = {
+  name:'if_brick',
   x:40,
   y:160,
   draggable: true
@@ -77,7 +78,7 @@ var dot_input_template = {
  }
 
 var dot_output_true_template = {
-  x:70,
+  x:175,
   y:118,
   radius: 10,
   fill: DOT_COLOR,
@@ -87,7 +88,7 @@ var dot_output_true_template = {
 }
 
 var dot_output_false_template = {
-  x:175,
+  x:70,
   y:118,
   radius: 10,
   fill: DOT_COLOR,
@@ -243,9 +244,9 @@ var input_block_template = {
 }
 
 var input_text_template = {
-  x: 95,
+  x: 55,
   y: 35,
-  text: 'INPUT',
+  text: 'USER REUEST',
   fontSize: 20,
   fontFamily: 'Calibri',
   fill: 'black',

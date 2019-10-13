@@ -4,6 +4,8 @@ var height = window.innerHeight;
 var stage = new Konva.Stage(stage_template);
 var layer = new Konva.Layer();
 
+var cur_level = 1
+
 document.getElementById("new_html_block_but").onclick = ()=>{
     spawn_html_brick()  
     
