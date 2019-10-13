@@ -10,7 +10,7 @@
 
 <body>
     <div class="main_menu">
-            <button class="last_level_but" id="last_level_but" disable>PREV LEVEL</button>
+        <button class="last_level_but" id="last_level_but" disable>PREV LEVEL</button>
         <div class="menu">
             <button id="new_html_block_but" class="new_block_but left-but">html page block</button>
             <button id="new_if_block_but" class=" new_block_but">IF block</button>
@@ -23,7 +23,8 @@
         <div class="edit_form" action="">
             <div class="number_of_level">Level #2</div>
             <button class="run" id="run_level_but">RUN</button>
-            <div class="message"> У Васи теперь две статьи на сайте. Он хочет отправлять их пользователям в зависимости от адреса запроса <br>(1.html &lt;- 1.html 2.html &lt;- 2.html). 
+            <div class="message"> У Васи теперь две статьи на сайте. Он хочет отправлять их пользователям в зависимости
+                от адреса запроса <br>(1.html &lt;- 1.html 2.html &lt;- 2.html).
                 Помогите ему отправить их читателям, для этого используйте IF-BLOCK
                 <br><br>Результат:<br> <span id="result"></span>
 
@@ -34,13 +35,30 @@
                 <button id="delete_block_but" class="delete_block_but">delete</button>
                 <button onClick="window.location.reload();" class="reload_page_button">RELOAD</button>
             </div>
+            <table class="table_for_base">
+                <tr>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                </tr>
+            </table>
         </div>
     </div>
     <script src="./manager.js"></script>
     <script src="./constants.js"></script>
     <script src="./templates.js"></script>
     <script src="./generators.js"></script>
-    <script src="./level2.js"></script>
+    <script src="./level3.js"></script>
 </body>
 
 </html>

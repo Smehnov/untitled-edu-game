@@ -280,3 +280,16 @@ input:focus{
 .last_level_but:not(:hover){
     transition: 0.5s;
 }
+
+.table_for_base{
+    width: 90%;
+    height: 10em;
+    margin: 3% auto;
+    border: 2px solid black;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+
+
+
