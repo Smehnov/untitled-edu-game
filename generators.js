@@ -50,7 +50,7 @@ function generate_input_brick(id){
 
     
 
-    brick_group.on('dragend', ()=>{
+    brick_group.on('dragmove', ()=>{
         update_arrows()
     })
 
@@ -111,7 +111,7 @@ function generate_output_brick(id){
         }
     })
 
-    brick_group.on('dragend', ()=>{
+    brick_group.on('dragmove', ()=>{
         update_arrows()
     })
 
@@ -207,7 +207,7 @@ function generate_html_brick(id){
         }
     })
 
-    brick_group.on('dragend', ()=>{
+    brick_group.on('dragmove', ()=>{
         update_arrows()
     })
 
@@ -348,7 +348,7 @@ function generate_if_brick(id){
 
     brick_group.add(brick_block, brick_text, brick_dot_input,brick_dot_output_true, brick_dot_output_false, brick_input_label)
 
-    brick_group.on('dragend', ()=>{
+    brick_group.on('dragmove', ()=>{
         update_arrows()
     })
 
