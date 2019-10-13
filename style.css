@@ -304,4 +304,17 @@ th:not(:hover){
     transition: 0.25s;
 }
 
+.table_for_base td{
+    border: 3px solid black;    
+}
+
+td:hover {
+    background: #5d9aeb;
+    transition: 0.25s;
+}
+
+td:not(:hover){
+    transition: 0.25s;
+}
+
 
