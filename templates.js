@@ -246,7 +246,7 @@ var input_block_template = {
 var input_text_template = {
   x: 55,
   y: 35,
-  text: 'USER REUEST',
+  text: 'USER REQUEST',
   fontSize: 20,
   fontFamily: 'Calibri',
   fill: 'black',
