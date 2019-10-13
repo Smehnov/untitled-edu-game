@@ -288,8 +288,20 @@ input:focus{
     border: 2px solid black;
     border-radius: 12px;
     font-weight: bold;
+    border-collapse: collapse;
 }
 
+.table_for_base th{
+    border: 3px solid black;    
+}
 
+th:hover {
+    background: rgb(61, 135, 231);
+    transition: 0.25s;
+}
+
+th:not(:hover){
+    transition: 0.25s;
+}
 
 
