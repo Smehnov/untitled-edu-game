@@ -50,3 +50,7 @@ p{
 #game:focus{
     outline: none;
 }
+
+.screen{
+    width: 50%;
+}
