@@ -64,7 +64,7 @@ document.getElementById("run_level_but").onclick = () => {
                 if ((arr1[1] == db_input_dot2) && (arr1[0] == base_output_dot)) {
                     console.log(333);
                     found_from = true
-                    console.log(text3.text());
+                    text2.text('DATABASE1')
                     
                     
                     
@@ -78,6 +78,7 @@ document.getElementById("run_level_but").onclick = () => {
                                 console.log(666);
                                 var found_id = true
                                 text4.text("idN")
+                                layer.draw()
                                 if ((text1.text() == "post_url") || (text1.text() == '"post_url"')) {
                                     console.log(7777);
                                     

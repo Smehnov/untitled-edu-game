@@ -351,7 +351,7 @@ var text_text2_template = {
   x: 15,
   y: 85,
   text: '""',
-  fontSize: 24,
+  fontSize: 18,
   fontFamily: 'Calibri',
   fill: 'white',
   fontStyle: 'bold'
