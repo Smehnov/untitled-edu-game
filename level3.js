@@ -36,10 +36,10 @@ document.getElementById("run_level_but").onclick = () => {
     var output_input_dot = output.findOne('.dot_input')
     var input_output_dot = input.findOne('.dot_output')
 
-    var text1 = db.findOne('.input_text1')
-    var text2 = db.findOne('.input_text2')
-    var text3 = db.findOne('.input_text3')
-    var text4 = db.findOne('.input_text4')
+    var text1 = db.find('.input_text')[0]
+    var text2 = db.find('.input_text')[1]
+    var text3 = db.find('.input_text')[2]
+    var text4 = db.find('.input_text')[3]
 
     console.log(output_input_dot);
     var span_result = document.getElementById('result')
@@ -48,28 +48,46 @@ document.getElementById("run_level_but").onclick = () => {
     for (let i = 0; i < dot_links.length; i++) {
         arr = dot_links[i];
 
-        if (arr[1] == output_input_dot) {
+        if ((arr[1] == output_input_dot) && (arr[0]==db_output_dot)) {
+            console.log(111);
+            
             found_link = true
             var found_from = false
             for (let i = 0; i < dot_links.length; i++) {
+                console.log(222);
                 var arr1 = dot_links[i];
-                if (arr1[1] == db_input_dot2 && arr[0] == db.db_input_dot2) {
+                console.log(arr);
+                console.log(db_input_dot2);
+                console.log(base_output_dot);
+                
+                
+                if ((arr1[1] == db_input_dot2) && (arr1[0] == base_output_dot)) {
+                    console.log(333);
                     found_from = true
-                    text2.text("DATABASE1")
-                    if (text3.text() == 'post_id' || text3.text() == '"post_id"') {
+                    console.log(text3.text());
+                    
+                    
+                    
+                    if ((text3.text() == 'post_id') || (text3.text() == '"post_id"')) {
+                        console.log(444);
                         var found_id = false
                         for (let i = 0; i < dot_links.length; i++) {
+                            console.log(555);
                             var arr2 = dot_links[i];
-                            if (arr2[1] == db_input_dot4 && arr[0] == db.db_input_dot4) {
+                            if ((arr2[1] == db_input_dot4) && (arr2[0] == input_output_dot)) {
+                                console.log(666);
                                 var found_id = true
                                 text4.text("idN")
-                                if (text1.text() == "post_url" || text1.text() == '"post_url"') {
-
-                                } else {
+                                if ((text1.text() == "post_url") || (text1.text() == '"post_url"')) {
+                                    console.log(7777);
+                                    
                                     span_result.style.color = "green"
                                     document.getElementById('next_level_but').classList.add("active_next_level_but")
                                     span_result.innerHTML = "Читатель смог получить пост Васи, правда этим читателем был сам Вася("
                                     is_level_completed = true
+                                } else {
+                                    span_result.style.color = "red"
+                                    span_result.innerHTML = "попытка выбрать параметр прошла неудачно"
                                 }
 
 
@@ -80,15 +98,16 @@ document.getElementById("run_level_but").onclick = () => {
                             span_result.style.color = "red"
                             span_result.innerHTML = "id не передан в запрос"
                         }
+                    
                     } else {
 
                     }
 
 
-                }
+                break;}
 
             }
-            if (!found_form) {
+            if (!found_from) {
                 span_result.style.color = "red"
                 span_result.innerHTML = "База данных не передана в запрос"
             }
@@ -96,7 +115,7 @@ document.getElementById("run_level_but").onclick = () => {
 break;
         } else {
             span_result.style.color = "red"
-            span_result.innerHTML = "ссылка на документ .html не передан в Server Response <br>"
+            span_result.innerHTML = "Ссылка на документ .html не передана в Server Response <br>"
         }
 
 
